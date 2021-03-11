@@ -14,23 +14,12 @@ class Home extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.red[600],
         ),
-        body: Center(
-          // child: Icon(
-          //   Icons.add_alert,
-          //   color: Colors.deepOrange[200],
-          //   size: 100.0,
-          // ),
-          child: RaisedButton.icon(
-              onPressed: () {
-                print('No new Notifications');
-              },
-              icon: Icon(
-                Icons.add_alert
-              ),
-            label: Text('Notifications'),
-            color: Colors.amber,
-          ),
-          ),
+        body: Container(
+          padding: EdgeInsets.all(20.0),
+          margin: EdgeInsets.fromLTRB(5.0, 10.0, 20.0,5.0),
+          color: Colors.black12,
+          child: Text('Welcome To my app'),
+        ),
         floatingActionButton: FloatingActionButton(
         onPressed: () {},
     child: Text('click')
