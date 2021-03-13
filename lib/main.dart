@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_handson/Quote.dart';
 
 void main() =>
     runApp(MaterialApp(
@@ -11,10 +12,10 @@ class ListData extends StatefulWidget {
 }
 
 class _ListDataState extends State<ListData> {
-  List<String> quotes = [
-    'Do or Die',
-    'Work Hard'
-    'Face Everything and Rise'
+  List<Quote> quotes = [
+    Quote('Shakespeare','Do or Die'),
+    Quote('Shakespeare','Do or Die'),
+    Quote('Shakespeare','Do or Die'),
   ];
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class _ListDataState extends State<ListData> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) => Text(quote)).toList(),
+        children: quotes.map((quote) => Text('${quote.quote} - ${quote.author}')).toList(),
       ),
     );
   }
