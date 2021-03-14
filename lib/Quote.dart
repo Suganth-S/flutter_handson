@@ -1,8 +1,8 @@
 class Quote
 {
-  String quote;
+  String text;
   String author;
 
-  Quote(this.author,this.quote){}
+  Quote(this.author,this.text){}
 }
 Quote myQuotes = Quote('Shakespeare','Do or die');
