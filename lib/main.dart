@@ -30,7 +30,11 @@ class _ListDataState extends State<ListData> {
         backgroundColor: Colors.redAccent,
       ),
       body: Column(
-        children: quotes.map((quote) => QuoteCard(quote:quote)).toList(),
+        children: quotes.map((quote) => QuoteCard(quote:quote,delete:(){
+          setState(() {
+            quotes.remove(quote);
+          });
+        })).toList(),
       ),
     );
   }

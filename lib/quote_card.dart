@@ -4,8 +4,9 @@ import 'package:flutter_handson/Quote.dart';
 class QuoteCard extends StatelessWidget {
 
   final Quote quote;
+  final Function delete;
   // ignore: empty_constructor_bodies
-  QuoteCard ({ this.quote});
+  QuoteCard ({ this.quote, this.delete});
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +31,13 @@ class QuoteCard extends StatelessWidget {
                   fontSize: 18.0,
                   color: Colors.grey[800]
               ),
+            ),
+            SizedBox(height: 8.0),
+            FlatButton.icon(
+                onPressed: delete,
+                icon: Icon(Icons.delete),
+                label: Text('Delete Quote'),
+              color: Colors.grey[200],
             )
           ],
         ),
